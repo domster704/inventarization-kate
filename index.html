@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Инвентаризация</title>
+    <link href="css/general.css" rel="stylesheet">
+    <link href="css/filter.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/table.css" rel="stylesheet">
+</head>
+<body>
+<div class="filter">
+    <div class="overlay"></div>
+    <div class="content">
+        <h2>Фильтр</h2>
+        <hr>
+        <div class="filter__options">
+            <p>Отсканировано</p>
+            <div>
+                <label for="scan_yes">
+                    <input name="scan" id="scan_yes" type="radio">
+                    да
+                </label>
+
+                <label for="scan_no">
+                    <input name="scan" id="scan_no" type="radio">
+                    нет
+                </label>
+            </div>
+            <br>
+
+            <p>Тип/категория</p>
+            <div>
+                <label for="category_tech">
+                    <input name="furniture" id="category_tech" type="radio">
+                    техника
+                </label>
+
+                <label for="category_furniture">
+                    <input name="furniture" id="category_furniture" type="radio">
+                    стулья
+                </label>
+            </div>
+            <br>
+
+            <p>Отображение по папкам</p>
+            <div>
+                <label for="show_withoutFolders">
+                    <input name="show_folders" id="show_withoutFolders" type="radio" checked="checked">
+                    без папок
+                </label>
+                <label for="show_withFolders">
+                    <input name="show_folders" id="show_withFolders" type="radio">
+                    с папками
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<header class="wrapper">
+    <form class="header__searchbar">
+        <input name="search" placeholder="Поиск..." type="text">
+    </form>
+
+    <div class="header__buttons">
+        <button>Добавить новую папку</button>
+        <button id="filter">Фильтр</button>
+    </div>
+</header>
+
+<main class="wrapper">
+    <div class="tableFilter addressList">
+    </div>
+
+    <div class="tableFilter molList"></div>
+
+    <div class="tableFilter sorting">
+        <p>Сортировать по</p>
+    </div>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Название</th>
+            <th>Инвентарный номер</th>
+            <th>М.О.Л.</th>
+            <th>Сумма</th>
+            <th>Местоположение</th>
+            <th>Папка</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Стол</td>
+            <td>123456789</td>
+            <td>А.В. Заглада</td>
+            <td>123</td>
+            <td>Лялин, 6</td>
+            <td>131 кабинет</td>
+        </tr>
+        <tr>
+            <td>Стол</td>
+            <td>123456789</td>
+            <td>ФИО2</td>
+            <td>123345</td>
+            <td>Огородная слобода</td>
+            <td>Кухня</td>
+        </tr>
+        </tbody>
+    </table>
+</main>
+
+<script src="js/main.js"></script>
+<script src="js/table.js"></script>
+</body>
+</html>

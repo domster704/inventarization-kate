@@ -1,0 +1,39 @@
+@font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../res/fonts/Inter-VariableFont_opsz,wght.ttf') format('woff2');
+}
+
+:root {
+    --font-family: Inter, sans-serif;
+}
+
+* {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family), sans-serif;
+
+    transition: all .2s ease;
+}
+
+html {
+    font-size: min(1vw, 1em);
+
+    @media (max-width: 1601px) {
+        font-size: 1em;
+    }
+}
+
+button, input {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+button {
+    cursor: pointer;
+}

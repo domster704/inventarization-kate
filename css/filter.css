@@ -1,0 +1,90 @@
+.filter {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+
+    z-index: 10000;
+
+    & {
+        display: none;
+
+        &.active {
+            display: block;
+
+            .content {
+                animation: filterShowing 0.2s;
+            }
+        }
+    }
+
+    .overlay {
+        width: 100%;
+        height: 100%;
+
+        cursor: pointer;
+
+        background: rgba(0, 0, 0, 0.25);
+    }
+
+    .content {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+
+        padding: 1.5em;
+
+        box-shadow: -3px 0 10px 3px rgba(0, 0, 0, 0.25);
+        background: #fff;
+
+        h2 {
+            margin-bottom: 0.5em;
+            font-weight: 700;
+            font-size: 1.25em;
+            color: #603bcc;
+        }
+
+        .filter__options {
+            margin-inline: 2.25em;
+            margin-top: 0.375em;
+
+            p, label {
+                font-weight: 400;
+                font-size: 0.94em;
+                color: rgba(0, 0, 0, 0.7);
+            }
+
+            > div {
+                list-style: none;
+                margin-left: 2em;
+
+                label {
+                    display: flex;
+                    gap: 0.375em
+                }
+            }
+        }
+    }
+
+    /*input[type='radio'] {*/
+    /*    box-sizing: border-box;*/
+    /*    appearance: none;*/
+    /*    background: white;*/
+    /*    */
+    /*    border: 1px solid #4f4f4f;*/
+    /*    border-radius: 4px;*/
+
+    /*    width: 16px;*/
+    /*    height: 16px;*/
+    /*}*/
+}
+
+@keyframes filterShowing {
+    0% {
+        right: -100%;
+    }
+
+    100% {
+        right: 0;
+    }
+}

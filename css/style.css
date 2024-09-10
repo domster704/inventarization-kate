@@ -1,0 +1,112 @@
+.wrapper {
+    margin-inline: 2.5em;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 2em;
+    padding-bottom: 3em;
+
+    .header__buttons {
+        display: flex;
+        gap: 2.5em;
+
+        button {
+            border-radius: 0.94em;
+
+            padding: 0.8125em;
+
+            box-shadow: 4px 4px 10px 1px rgba(0, 0, 0, 0.25);
+            background: #875eff;
+
+            font-weight: 700;
+            font-size: 1.25em;
+            color: #fff;
+        }
+    }
+}
+
+.header__searchbar {
+    height: fit-content;
+
+    border-radius: 0.94em;
+
+    box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.25);
+    background: #fff;
+
+    overflow: hidden;
+
+    input {
+        width: 36.25em;
+        padding: 1em 1.25em;
+
+        font-weight: 400;
+        font-size: 1em;
+
+        &::placeholder {
+            color: rgba(0, 0, 0, 0.6);
+        }
+    }
+}
+
+main {
+    .addressList {
+        margin-bottom: 0.625em;
+    }
+
+    .molList, .folderViewing {
+        margin-bottom: 2em;
+    }
+
+    .tableFilter {
+        cursor: default;
+        display: flex;
+        gap: 0.5em;
+
+        align-items: center;
+
+        * {
+            transition: none;
+        }
+    }
+
+    .addressList, .molList {
+        button {
+            font-size: 1.25em;
+            color: #000;
+
+            cursor: pointer;
+
+            &.active {
+                font-weight: 600;
+                color: #603bcc;
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .sorting, .folderViewing {
+        button {
+            font-size: 1em;
+            color: rgba(0, 0, 0, 0.6);
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            &.active {
+                font-weight: 600;
+            }
+        }
+
+        p {
+            font-size: 1em;
+            color: rgba(0, 0, 0, 0.6);
+        }
+    }
+}
